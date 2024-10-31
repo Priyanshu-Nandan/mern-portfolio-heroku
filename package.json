@@ -7,16 +7,16 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build-client": "cd frontend && npm ci && npm run build", 
-    "build": "npm ci && npm run build-client",                 
-    "postinstall": "CI=false npm run build"                  
+    "build-client": "cd frontend && npm install && npm run build",
+    "build": "npm install && npm run build-client",
+    "postinstall": "npm run build"
   },
   "author": "Priyanshu Nandan",
   "license": "ISC",
   "engines": {
-    "node": ">=18.x",                                         
-    "npm": ">=9.x"                                           
-  },
+    "node": "18.x",  
+    "npm": "10.x"    
+  }, 
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
