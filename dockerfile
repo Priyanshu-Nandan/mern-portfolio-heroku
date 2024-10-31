@@ -13,8 +13,11 @@ RUN cd frontend && npm install
 # Copy the rest of the application
 COPY . .
 
-# Build frontend with CI=false to ignore warnings
-RUN cd frontend && CI=false npm run build
+# Build frontend
+RUN cd frontend && npm run build
+
+# Build the server
+RUN npm run build
 
 # Start the server
 CMD ["npm", "start"]
