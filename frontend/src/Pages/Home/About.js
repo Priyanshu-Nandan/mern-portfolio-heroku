@@ -1,6 +1,5 @@
 import React from 'react'
 import SectionTitle from '../../Components/Section/SectionTitle';
-// import profileImg from '../../assets/profileImg.png';
 import { useSelector } from 'react-redux';
 
 function About() {

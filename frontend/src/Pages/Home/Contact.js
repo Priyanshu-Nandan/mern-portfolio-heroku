@@ -1,6 +1,5 @@
 import React from 'react'
 import SectionTitle from '../../Components/Section/SectionTitle';
-import profileImg from '../../assets/profileImg.png';
 import { useSelector } from 'react-redux';
 function Contact() {
     
@@ -35,7 +34,7 @@ function Contact() {
                 </h1>
             </div>
             <div className='h-3/4 w-[300px] sm:w-3/4 sm-w-full'>
-                <img src={profileImg} alt='profile'/>
+                <img src="https://placehold.co/600x400/png" alt='profile'/>
             </div>
         </div>
     </div>
