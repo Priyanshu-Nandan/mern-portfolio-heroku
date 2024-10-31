@@ -14,7 +14,7 @@
   "author": "Priyanshu Nandan",
   "license": "ISC",
   "engines": {
-    "node": "18.x",  
+    "node": "20.x",  
     "npm": "10.x"    
   }, 
   "dependencies": {
