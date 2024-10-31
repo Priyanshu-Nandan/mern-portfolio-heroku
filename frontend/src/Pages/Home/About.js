@@ -11,7 +11,7 @@ function About() {
             <SectionTitle title="About me" />
             <div className='flex w-full items-center sm:flex-col'>
                 <div className='h-2/4 w-6/12 sm:w-3/4 sm-w-full'>
-                    <img src={userImgUrl || ''} alt='profile'/>
+                    <img src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp3_d7855f9562.webp" alt='profile' width="350px"/>
                 </div>
                 <div className='flex flex-col gap-5 w-1/2 sm:w-full'>
                     <p className='text-white'>
