@@ -13,7 +13,7 @@ function AdminIntro() {
       dispatch(ShowLoading());
       const response = await axios.post('/api/portfolio/update-intro', {
         ...values,
-        _id:portfolioData.intro._id
+        _id: portfolioData.intro._id
       })
       console.log(response);
       dispatch(HideLoading());
@@ -30,7 +30,7 @@ function AdminIntro() {
   }
 
   return (
-    <div className='w-3/4'>
+    <div key="adminIntro" className='w-3/4'>
       <Form onFinish={onFinish} layout='vertical' initialValues={portfolioData?.intro}>
         <Form.Item name="welcomeText" label="Add a Intro">
           <Input placeholder='Enter Welcome Text' />

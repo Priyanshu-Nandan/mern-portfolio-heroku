@@ -11,21 +11,21 @@ import Sider from './Sider';
 import { useSelector } from 'react-redux';
 
 function Home() {
-  const { portfolioData} = useSelector(state => state.root);
+  const { portfolioData } = useSelector(state => state.root);
   return (
-    <div>
+    <div key="main_home_entry">
       <Header />
       {portfolioData && (
-         <div className='bg-primary px-40 py-20 sm:px-5'>
-         <Intro/>
-         <About/>
-         <Experiences />
-         <Projects />
-         <Courses />
-         <Contact />
-         <Footer />
-         <Sider />
-       </div>
+        <div className='bg-primary px-40 py-20 sm:px-5'>
+          <Intro />
+          <About />
+          <Experiences />
+          <Projects />
+          <Courses />
+          <Contact />
+          <Footer />
+          <Sider />
+        </div>
       )}
     </div>
   )
