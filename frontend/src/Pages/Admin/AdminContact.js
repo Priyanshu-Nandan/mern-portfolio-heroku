@@ -7,15 +7,15 @@ import axios from 'axios';
 function AdminContact() {
   const { portfolioData } = useSelector((state) => state.root);
   const dispatch = useDispatch();
-  const {contacts} = portfolioData;
+  const { contacts } = portfolioData;
   const contact = contacts[0];
   const onFinish = async (values) => {
-    
+
     try {
       dispatch(ShowLoading());
       const response = await axios.post('/api/portfolio/update-contact', {
         ...values,
-        _id:portfolioData.contacts[0]._id
+        _id: portfolioData.contacts[0]._id
       })
       dispatch(HideLoading());
       if (response.data.success) {
@@ -29,7 +29,7 @@ function AdminContact() {
     }
   }
   return (
-    <div className='w-3/4'>
+    <div key="adminContact" className='w-3/4'>
       <Form onFinish={onFinish} layout='vertical' initialValues={contact}>
         <Form.Item name="name" label="Name">
           <Input placeholder='Enter name' />
@@ -46,7 +46,7 @@ function AdminContact() {
         <Form.Item name="mobile" label="Phone No">
           <Input placeholder='Enter number' />
         </Form.Item>
-       
+
         <div className='flex justify-start w-full'>
           <button className='px-6 py-2 bg-primary text-white' type='submit'> Save </button>
         </div>

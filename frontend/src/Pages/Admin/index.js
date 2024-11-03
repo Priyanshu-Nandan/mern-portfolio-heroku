@@ -46,14 +46,14 @@ function Admin() {
     const { portfolioData } = useSelector(state => state.root);
 
     useEffect(() => {
-      const localData = localStorage.getItem('token');
-      if (!localData) {
-        window.location.href = '/admin-login';
-      }
+        const localData = localStorage.getItem('token');
+        if (!localData) {
+            window.location.href = '/admin-login';
+        }
     }, [])
-    
+
     return (
-        <div>
+        <div key="admin_main_entry">
             <Header />
 
             {portfolioData &&

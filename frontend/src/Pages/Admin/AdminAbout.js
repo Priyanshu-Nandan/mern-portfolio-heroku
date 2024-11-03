@@ -7,7 +7,7 @@ import axios from 'axios';
 
 function AdminAbout() {
   const { portfolioData } = useSelector((state) => state.root);
-  
+
   const dispatch = useDispatch();
   const onFinish = async (values) => {
     const tempSkills = values.skills.split(',');
@@ -16,7 +16,7 @@ function AdminAbout() {
       dispatch(ShowLoading());
       const response = await axios.post('/api/portfolio/update-about', {
         ...values,
-        _id:portfolioData.about._id
+        _id: portfolioData.about._id
       })
       dispatch(HideLoading());
       if (response.data.success) {
@@ -31,10 +31,10 @@ function AdminAbout() {
   }
 
   return (
-    <div className='w-3/4'>
+    <div key="adminABout" className='w-3/4'>
       <Form onFinish={onFinish} layout='vertical' initialValues={{
         ...portfolioData.about,
-        skills:portfolioData.about.skills.join(' , ')
+        skills: portfolioData.about.skills.join(' , ')
       }}>
         <Form.Item name="userImgUrl" label="Add a profile image URL">
           <Input placeholder='Enter Image URL' />
