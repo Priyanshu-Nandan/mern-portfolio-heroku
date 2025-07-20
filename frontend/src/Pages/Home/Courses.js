@@ -18,7 +18,7 @@ function Courses() {
                                 setSelectedItemIndex(index)
                             }}
                             className='cursor-pointer'>
-                            <h1 className={`text-l px-5 ${selectedItemIndex === index ? 'text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#1b9e938a] rounded py-3' : 'text-white'}`}>{course.title}</h1>
+                            <h1 className={`text-l px-5 ${selectedItemIndex === index ? 'text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#1b9e938a] rounded py-3 w-[170px]' : 'text-white w-[170px]'}`}>{course.title}</h1>
                         </div>
 
                     })

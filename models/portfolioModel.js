@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const introSchema = new mongoose.Schema({
+const introSchema = mongoose.Schema({
     welcomeText: {
-        type:String,
+        type: String,
         required: true
     },
     firstname: {
@@ -17,7 +17,11 @@ const introSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    description1: {
+        type: String,
+        required: true
+    },
+    description2: {
         type: String,
         required: true
     }
