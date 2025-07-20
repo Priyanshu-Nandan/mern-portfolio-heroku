@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SectionTitle from '../../Components/Section/SectionTitle'
 import { useSelector } from 'react-redux';
+
 function Projects() {
     const [selectedItemIndex, setSelectedItemIndex] = useState(0)
     const { portfolioData } = useSelector(state => state.root);
@@ -8,6 +9,8 @@ function Projects() {
     return (
         <div key="projects">
             <SectionTitle title="Projects" />
+            {console.log(projects   )}
+
             <div className='flex py-10 gap-20 sm:flex-col'>
                 <div className='flex flex-col gap-8 border-l-2 border-[#7ef1c5] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full'>
                     {projects.map((project, index) => {
@@ -24,11 +27,13 @@ function Projects() {
                     }
                 </div>
                 <div className='flex items-center justify-center gap-10 sm:flex-col'>
-                    <img src={projects[selectedItemIndex].image} alt="img" className='h-2/4 w-6/12 sm:w-3/4 sm-w-full' />
+                    {/* <img src={projectPic} alt="img" className='h-2/4 w-6/12 sm:w-3/4 sm-w-full' /> */}
                     <div className='flex flex-col gap-5'>
                         <h1 className='text-secondary text-xl'>{projects[selectedItemIndex].title}</h1>
                         <p className='text-white'>{projects[selectedItemIndex].description}</p>
-                        <p className='text-white'> Scrollbar Selectors. For webkit browsers, you can use the following pseudo elements to customize the browser's scrollbar: ... Track your progress - it's free!</p>
+                        <p className='text-white'>
+                            <a href={projects[selectedItemIndex].link} target='_blank' rel="noreferrer"> Click here to view this project</a>
+                        </p>
                     </div>
                 </div>
             </div>

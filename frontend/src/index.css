@@ -93,3 +93,10 @@ input:focus, textarea:focus{
     outline: olive;
     border: 1.5px solid gray;
 }
+
+.cursor-pointer {
+    width: max-content;
+}
+.text-white {
+    text-align: justify;
+}

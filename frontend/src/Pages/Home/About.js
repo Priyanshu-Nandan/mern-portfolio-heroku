@@ -24,9 +24,7 @@ function About() {
                 </div>
             </div>
             <div className='py-5'>
-                <h1 className='text-tertiary text-xl'>
-                    Here are a few technologies I've been working on..
-                </h1>
+                <SectionTitle title="Skills" />
                 <div key="skills" className='flex flex-wrap gap-10 mt-5'>
                     {
                         skills.map((skill, index) => {

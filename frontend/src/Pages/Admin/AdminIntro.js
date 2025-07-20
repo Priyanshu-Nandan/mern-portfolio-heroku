@@ -44,8 +44,11 @@ function AdminIntro() {
         <Form.Item name="caption" label="Add a Caption">
           <Input placeholder='Add a caption' />
         </Form.Item>
-        <Form.Item name="description" label="About Yourself">
-          <TextArea placeholder='Add about yourself' />
+        <Form.Item name="description1" label="About Yourself (Part 1)">
+          <TextArea placeholder='Add about yourself - part 1' />
+        </Form.Item>
+        <Form.Item name="description2" label="About Yourself (Part 2)">
+          <TextArea placeholder='Add about yourself - part 2' />
         </Form.Item>
         <div className='flex justify-start w-full'>
           <button className='px-6 py-2 bg-primary text-white' type='submit'> Save </button>

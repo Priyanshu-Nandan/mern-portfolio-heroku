@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionTitle from '../../Components/Section/SectionTitle';
 import { useSelector } from 'react-redux';
+import profilePic from '../../assets/profilePic.jpg';
 function Contact() {
 
     const { portfolioData } = useSelector(state => state.root);
@@ -36,7 +37,7 @@ function Contact() {
                     </h1>
                 </div>
                 <div className='h-3/4 w-[300px] sm:w-3/4 sm-w-full'>
-                    <img src="https://placehold.co/600x400/png" alt='profile' />
+                    <img src={profilePic} alt='profile' />
                 </div>
             </div>
         </div>
